@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import rankeyLogo from "@/assets/rankey-logo.jpg";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,7 +12,8 @@ const Header = () => {
     { name: "Home", path: "/" },
     { name: "Pricing", path: "/pricing" },
     { name: "Use Cases", path: "/use-cases" },
-    { name: "Contact", path: "#contact" },
+    { name: "Contact", path: "/contact" },
+    { name: "Chat", path: "/chat" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -21,11 +23,8 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold">
-              <span className="text-primary-foreground">Ran</span>
-              <span className="text-accent">Key</span>
-            </span>
+          <Link to="/" className="flex items-center">
+            <img src={rankeyLogo} alt="RanKey Logo" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -50,8 +49,8 @@ const Header = () => {
                 Login
               </Button>
             </Link>
-            <Link to="#trial">
-              <Button variant="cta">Start Free Trial</Button>
+            <Link to="/dashboard">
+              <Button variant="cta">Go to Dashboard</Button>
             </Link>
           </div>
 
@@ -85,9 +84,9 @@ const Header = () => {
                   Login
                 </Button>
               </Link>
-              <Link to="#trial" onClick={() => setMobileMenuOpen(false)}>
+              <Link to="/dashboard" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="cta" className="w-full">
-                  Start Free Trial
+                  Go to Dashboard
                 </Button>
               </Link>
             </nav>

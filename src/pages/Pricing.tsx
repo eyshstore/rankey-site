@@ -13,7 +13,7 @@ const Pricing = () => {
   const plans = [
     {
       name: "Basic",
-      price: "$9.99",
+      price: "$19",
       period: "/month",
       features: [
         "10K ASINs per day",

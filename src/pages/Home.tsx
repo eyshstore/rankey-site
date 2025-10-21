@@ -27,7 +27,7 @@ const Home = () => {
                   Start Free Trial
                 </Button>
                 <Link to="/use-cases">
-                  <Button variant="outline" size="lg" className="text-lg border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+                  <Button variant="cta" size="lg" className="text-lg">
                     See How It Works
                   </Button>
                 </Link>
