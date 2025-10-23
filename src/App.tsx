@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
 import UseCases from "./pages/UseCases";
 import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
 import Chat from "./pages/Chat";
 import Dashboard from "./pages/Dashboard";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

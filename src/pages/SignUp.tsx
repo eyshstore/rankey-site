@@ -7,32 +7,49 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import dashboardHero from "@/assets/dashboard-hero.png";
 
-const Login = () => {
+const SignUp = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log("Login attempt:", { email, password });
+    // Handle sign-up logic here
+    console.log("Sign-up attempt:", { name, email, password });
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section with Login Form */}
+      {/* Hero Section with Sign-Up Form */}
       <section className="flex-1 bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Left Side - Login Form */}
+            {/* Left Side - Sign-Up Form */}
             <div className="animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Log In to RanKey</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Start Your Free Trial</h1>
               <p className="text-lg text-primary-foreground/80 mb-8">
-                Access your ASIN scraping dashboard and start ranking.
+                Join RanKey today and unlock profitable ASINs for your eBay store.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6 bg-card rounded-xl p-8 shadow-2xl">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-card-foreground">
+                    Full Name
+                  </Label>
+                  <Input
+                    id="name"
+                    type="text"
+                    placeholder="John Doe"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    className="bg-background"
+                  />
+                </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-card-foreground">
                     Email
@@ -63,23 +80,31 @@ const Login = () => {
                   />
                 </div>
 
-                <div className="flex items-center justify-between text-sm">
-                  <Link to="#forgot" className="text-accent hover:underline">
-                    Forgot Password?
-                  </Link>
-                  <Link to="/signup" className="text-accent hover:underline">
-                    Sign Up for Free
-                  </Link>
+                <div className="space-y-2">
+                  <Label htmlFor="confirmPassword" className="text-card-foreground">
+                    Confirm Password
+                  </Label>
+                  <Input
+                    id="confirmPassword"
+                    type="password"
+                    placeholder="••••••••"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    required
+                    className="bg-background"
+                  />
                 </div>
 
                 <Button type="submit" variant="cta" className="w-full">
-                  Log In
+                  Start Free Trial
                 </Button>
 
                 <div className="text-center text-sm text-muted-foreground">
                   <p>
-                    Rank your products, unlock your dashboard.{" "}
-                    <span className="font-semibold text-accent">RanKey = Rank + Key</span>
+                    Already have an account?{" "}
+                    <Link to="/login" className="text-accent hover:underline font-semibold">
+                      Log In
+                    </Link>
                   </p>
                 </div>
               </form>
@@ -104,16 +129,11 @@ const Login = () => {
       <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
-            Not a Member? Unlock eBay Profits with RanKey!
+            Join Thousands of Successful Dropshippers
           </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Start your 14-day free trial today and discover how RanKey can transform your dropshipping business.
+            14-day free trial • No credit card required • Cancel anytime
           </p>
-          <Link to="/">
-            <Button variant="cta" size="lg">
-              Start Free Trial
-            </Button>
-          </Link>
         </div>
       </section>
 
@@ -122,4 +142,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
