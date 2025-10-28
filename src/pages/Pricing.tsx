@@ -16,10 +16,10 @@ const Pricing = () => {
       price: "$19",
       period: "/month",
       features: [
-        "10K ASINs per day",
-        "Basic analytics dashboard",
-        "Email support",
-        "14-day free trial",
+        "10,000 ASINs/month",
+        "Category scans",
+        "Excel export",
+        "Email alerts",
       ],
       cta: "Sign Up",
       popular: false,
@@ -29,12 +29,10 @@ const Pricing = () => {
       price: "$27",
       period: "/month",
       features: [
-        "30K ASINs per day",
-        "Smart ranking algorithm",
-        "Priority support",
-        "Advanced analytics",
-        "eBay integration",
-        "14-day free trial",
+        "30,000 ASINs/month",
+        "Faster scans",
+        "Priority queue",
+        "Email + In-app alerts",
       ],
       cta: "Sign Up",
       popular: true,
@@ -44,12 +42,10 @@ const Pricing = () => {
       price: "$39",
       period: "/month",
       features: [
-        "50K ASINs per day",
-        "Full eBay API integration",
-        "Dedicated account manager",
-        "Custom analytics reports",
-        "White-label options",
-        "14-day free trial",
+        "50,000 ASINs/month",
+        "Max speed",
+        "Dedicated support",
+        "Custom export formats",
       ],
       cta: "Contact Us",
       popular: false,
@@ -58,19 +54,14 @@ const Pricing = () => {
 
   const faqs = [
     {
-      question: "What is RanKey?",
+      question: "How many products can I scan per month?",
       answer:
-        "RanKey is a powerful SaaS tool that helps dropshippers scrape and rank Amazon ASINs for eBay. Our AI-powered platform identifies high-profit products with 1K+ monthly sales, making it easy to find winning products for your eBay store.",
+        "Up to 50K on Enterprise — each scan pulls live Amazon data. Basic includes 10,000 ASINs/month, Pro includes 30,000 ASINs/month, and Enterprise includes 50,000 ASINs/month.",
     },
     {
-      question: "How fast can I scrape ASINs?",
+      question: "What data comes with each product?",
       answer:
-        "With RanKey, you can scrape up to 100K+ ASINs per day depending on your plan. Our Basic plan allows 10K ASINs/day, Pro allows 30K/day, and Enterprise allows 50K/day. All scraping is automated and runs in the background.",
-    },
-    {
-      question: "Is there a free trial?",
-      answer:
-        "Yes! All plans include a 14-day free trial with no credit card required. You can test RanKey's full features and see how it ranks and unlocks profitable ASINs for your eBay business before committing to a paid plan.",
+        "ASIN, Title, Price, Stock Status, Prime, Brand, Category, Rating, Availability, Color, Size, First Available, Coupon, and more — over 20 data points per product ready for Excel.",
     },
   ];
 
@@ -82,10 +73,10 @@ const Pricing = () => {
       <section className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-            Choose Your RanKey Plan to Rank and Unlock Profits
+            Simple Plans for Every Research Volume
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto animate-fade-in">
-            Start with a 14-day free trial – no credit card required.
+            14-day free trial · No credit card required
           </p>
         </div>
       </section>
@@ -137,7 +128,7 @@ const Pricing = () => {
       <section id="faq" className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-            Got Questions About RanKey?
+            Frequently Asked Questions
           </h2>
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
@@ -158,13 +149,13 @@ const Pricing = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
-            Rank Smart, Sell Big – Start Your Free Trial!
+            Start Your Market Research Today
           </h2>
           <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Join thousands of dropshippers who trust RanKey to unlock their eBay profits.
+            Join e-commerce teams using RanKey to discover what's selling on Amazon.
           </p>
           <Button variant="cta" size="lg" className="text-lg animate-glow-pulse">
-            Start 14-Day Free Trial
+            Start Free Scan
           </Button>
         </div>
       </section>

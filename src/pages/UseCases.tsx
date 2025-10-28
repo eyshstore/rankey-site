@@ -7,34 +7,34 @@ const UseCases = () => {
   const useCases = [
     {
       icon: Rocket,
-      title: "Mass ASIN Scraping",
-      description: "Scan 100K+ Amazon products in hours with our powerful automation engine.",
+      title: "Category Performance Audit",
+      description: "Run a full scan to see the current best-sellers in any niche.",
       animation: "fade-in",
     },
     {
       icon: TrendingUp,
-      title: "Smart Ranking Algorithm",
-      description: "Prioritize products with 1K+ monthly sales using our AI-powered ranking system.",
+      title: "Seasonal Demand Tracking",
+      description: "Schedule daily scans before peak seasons to catch rising products early.",
       animation: "slide-in",
     },
     {
       icon: DollarSign,
-      title: "Unlock High-Margin Products",
-      description: "Find eBay-ready products with high profit margins that sell fast.",
+      title: "Product Validation",
+      description: "Export ranked ASINs to validate new supplier listings against live sales.",
       animation: "zoom-in",
     },
     {
       icon: Key,
-      title: "Seamless eBay Integration",
-      description: "Upload ASINs directly to your eBay store with one-click integration.",
+      title: "Inventory Forecasting",
+      description: "Use Popularity Rank + Stock Status to predict re-order timing.",
       animation: "fade-in",
     },
   ];
 
   const stats = [
-    { value: "100K+", label: "ASINs Scanned/Hour" },
-    { value: "3x", label: "eBay Sales Boost" },
-    { value: "95%", label: "User Satisfaction" },
+    { value: "50K", label: "ASINs/Month" },
+    { value: "20+", label: "Data Points" },
+    { value: "Hours", label: "Scan Time" },
   ];
 
   return (
@@ -45,10 +45,10 @@ const UseCases = () => {
       <section className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-            How RanKey Ranks and Unlocks Your Dropshipping Success
+            How Merchants Use RanKey for Smarter Product Decisions
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto animate-fade-in">
-            From mass ASIN scraping to eBay profits, RanKey is your key to success.
+            Real workflows — from trend spotting to inventory planning.
           </p>
         </div>
       </section>
@@ -114,23 +114,23 @@ const UseCases = () => {
               {[
                 {
                   step: "1",
-                  title: "Connect Your Accounts",
-                  description: "Link your Amazon and eBay accounts to RanKey in just a few clicks.",
+                  title: "Choose a Category",
+                  description: "Select any Amazon category and specify how many products to scan.",
                 },
                 {
                   step: "2",
-                  title: "Set Your Criteria",
-                  description: "Define your target products, price ranges, and sales thresholds.",
+                  title: "Wait for Results",
+                  description: "Get notified when your scan completes — in-app or email alerts.",
                 },
                 {
                   step: "3",
-                  title: "Let AI Rank Products",
-                  description: "Our smart algorithm scans and ranks thousands of ASINs based on profitability.",
+                  title: "Review Rankings",
+                  description: "Products are sorted by sales-based popularity rank — see what's moving fast.",
                 },
                 {
                   step: "4",
-                  title: "Upload to eBay",
-                  description: "One-click integration uploads your selected products directly to eBay.",
+                  title: "Export Data",
+                  description: "Download full results to Excel with 20+ data points per product.",
                 },
               ].map((item, index) => (
                 <div
@@ -156,13 +156,13 @@ const UseCases = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
-            Ready to Rank and Unlock Profits?
+            Start Your First Scan – Free
           </h2>
           <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Start your 14-day free trial and see how RanKey transforms your dropshipping business.
+            14-day free trial. No credit card required.
           </p>
           <Button variant="cta" size="lg" className="text-lg animate-glow-pulse">
-            Start Free Trial
+            Start Free Scan
           </Button>
         </div>
       </section>

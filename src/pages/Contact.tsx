@@ -32,10 +32,10 @@ const Contact = () => {
       <section className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-            Contact RanKey
+            Talk to the RanKey Team
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto animate-fade-in">
-            Questions about ASIN scraping or eBay integration? We're here to help.
+            Need help with scan depth, data fields, or team accounts?
           </p>
         </div>
       </section>
@@ -96,7 +96,7 @@ const Contact = () => {
                     className="w-4 h-4 text-accent border-input rounded focus:ring-accent"
                   />
                   <label htmlFor="newsletter" className="ml-2 text-sm text-card-foreground">
-                    Join our newsletter for ASIN tips
+                    Send me weekly "Top 10 Rising ASINs" report
                   </label>
                 </div>
                 <Button variant="cta" className="w-full" type="submit">
@@ -116,11 +116,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-card-foreground mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+1-800-123-4567</p>
+                    <p className="text-muted-foreground">+1 (800) 555-0199</p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-card-foreground mb-1">Address</h3>
-                    <p className="text-muted-foreground">123 Tech St, San Francisco, CA</p>
+                    <p className="text-muted-foreground">548 Market St, San Francisco, CA 94104</p>
                   </div>
                 </div>
               </div>
@@ -141,13 +141,13 @@ const Contact = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
-            Ready to Rank and Sell Big?
+            Ready to Discover What's Selling?
           </h2>
           <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Start your 14-day free trial today. No credit card required.
+            Start your market research today. 14-day free trial.
           </p>
           <Button variant="cta" size="lg" className="text-lg animate-glow-pulse">
-            Start Free Trial
+            Start Free Scan
           </Button>
         </div>
       </section>

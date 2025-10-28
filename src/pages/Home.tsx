@@ -17,20 +17,15 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                RanKey: Rank Smart, Sell Big – Scrape 100K+ ASINs in Hours
+                RanKey – Discover What's Selling on Amazon Right Now
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/80">
-                Rank top-selling Amazon products and unlock eBay profits with AI-powered automation.
+                Scan any category, get products ranked by real sales volume, and export actionable market data in minutes.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="cta" size="lg" className="text-lg">
-                  Start Free Trial
+                  Start Free Scan
                 </Button>
-                <Link to="/use-cases">
-                  <Button variant="cta" size="lg" className="text-lg">
-                    See How It Works
-                  </Button>
-                </Link>
               </div>
             </div>
             <div className="animate-zoom-in">
@@ -48,30 +43,30 @@ const Home = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
-            Why Choose RanKey?
+            Why E-commerce Teams Choose RanKey
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Powerful features designed to help you rank and unlock profitable Amazon ASINs for eBay.
+            Powerful market research tools to discover what's selling on Amazon.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
               icon={Rocket}
-              title="Mass Scraping"
-              description="Scrape 100K+ ASINs in hours with our powerful automation engine."
+              title="Deep Category Scans"
+              description="Choose any Amazon category and define how many products to pull (each API call = one product). Results in hours."
               animation="fade-in"
               onLearnMore={() => window.location.href = "/use-cases"}
             />
             <FeatureCard
               icon={TrendingUp}
-              title="Smart Ranking"
-              description="AI prioritizes products with 1K+ monthly sales for maximum profit potential."
+              title="Sales-Based Popularity Rank"
+              description="See exactly which items are moving fastest in the category — ranked by actual purchase data."
               animation="slide-in"
               onLearnMore={() => window.location.href = "/use-cases"}
             />
             <FeatureCard
               icon={Key}
-              title="eBay Success"
-              description="Direct uploads to eBay with seamless integration for instant listings."
+              title="Instant Excel/Access Export"
+              description="Download full results with 20+ data points per product, ready for your spreadsheets."
               animation="fade-in"
               onLearnMore={() => window.location.href = "/use-cases"}
             />
@@ -83,24 +78,14 @@ const Home = () => {
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-            Dropshippers Trust RanKey
+            E-commerce Teams Trust RanKey
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "RanKey tripled my eBay sales in a month! The AI ranking is spot-on.",
-                author: "Sarah M.",
-                role: "eBay Seller",
-              },
-              {
-                quote: "I scrape 50K ASINs daily now. RanKey is a game-changer for dropshipping.",
-                author: "Michael T.",
-                role: "Dropshipping Expert",
-              },
-              {
-                quote: "The eBay integration saves me hours every day. Worth every penny!",
-                author: "Jessica L.",
-                role: "Online Entrepreneur",
+                quote: "RanKey shows me the top-selling items in any category before my competitors even know they exist.",
+                author: "David M.",
+                role: "E-commerce Buyer",
               },
             ].map((testimonial, index) => (
               <div
@@ -124,13 +109,13 @@ const Home = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
-            Ready to Rank and Unlock eBay Profits?
+            Ready to Discover What's Selling?
           </h2>
           <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Start your 14-day free trial today. No credit card required.
           </p>
           <Button variant="cta" size="lg" className="text-lg animate-glow-pulse">
-            Start 14-Day Free Trial
+            Start Free Scan
           </Button>
         </div>
       </section>

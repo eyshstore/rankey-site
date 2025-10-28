@@ -27,9 +27,9 @@ const Login = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left Side - Login Form */}
             <div className="animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Log In to RanKey</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Welcome Back to Your RanKey Dashboard</h1>
               <p className="text-lg text-primary-foreground/80 mb-8">
-                Access your ASIN scraping dashboard and start ranking.
+                View active scans, download results, and launch new category research.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6 bg-card rounded-xl p-8 shadow-2xl">
@@ -76,12 +76,6 @@ const Login = () => {
                   Log In
                 </Button>
 
-                <div className="text-center text-sm text-muted-foreground">
-                  <p>
-                    Rank your products, unlock your dashboard.{" "}
-                    <span className="font-semibold text-accent">RanKey = Rank + Key</span>
-                  </p>
-                </div>
               </form>
             </div>
 
@@ -93,7 +87,7 @@ const Login = () => {
                 className="rounded-xl shadow-2xl"
               />
               <p className="text-center mt-4 text-primary-foreground/70">
-                Your ASIN ranking dashboard awaits
+                Your market research dashboard awaits
               </p>
             </div>
           </div>
@@ -104,14 +98,14 @@ const Login = () => {
       <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
-            Not a Member? Unlock eBay Profits with RanKey!
+            Not a Member? Start Your Market Research!
           </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Start your 14-day free trial today and discover how RanKey can transform your dropshipping business.
+            Start your 14-day free trial today and discover what's selling on Amazon.
           </p>
           <Link to="/">
             <Button variant="cta" size="lg">
-              Start Free Trial
+              Start Free Scan
             </Button>
           </Link>
         </div>
