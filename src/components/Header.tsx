@@ -2,10 +2,12 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, KeyRound, TrendingUp } from "lucide-react";
 import { useState } from "react";
+import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/clerk-react";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { isSignedIn } = useUser();
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -50,14 +52,25 @@ const Header = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/login">
-              <Button variant="ghost" className="text-primary-foreground hover:text-accent">
-                Login
-              </Button>
-            </Link>
-            <Link to="/dashboard">
-              <Button variant="cta">Go to Dashboard</Button>
-            </Link>
+            {!isSignedIn ? (
+              <>
+                <SignUpButton mode="modal">
+                  <Button variant="cta">Sign Up</Button>
+                </SignUpButton>
+                <SignInButton mode="modal">
+                  <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary">
+                    Log In
+                  </Button>
+                </SignInButton>
+              </>
+            ) : (
+              <>
+                <Link to="/dashboard">
+                  <Button variant="cta">Go to Dashboard</Button>
+                </Link>
+                <UserButton afterSignOutUrl="/" />
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,16 +98,31 @@ const Header = () => {
                   {link.name}
                 </Link>
               ))}
-              <Link to="/login" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="ghost" className="w-full text-primary-foreground hover:text-accent">
-                  Login
-                </Button>
-              </Link>
-              <Link to="/dashboard" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="cta" className="w-full">
-                  Go to Dashboard
-                </Button>
-              </Link>
+              {!isSignedIn ? (
+                <>
+                  <SignUpButton mode="modal">
+                    <Button variant="cta" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                      Sign Up
+                    </Button>
+                  </SignUpButton>
+                  <SignInButton mode="modal">
+                    <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                      Log In
+                    </Button>
+                  </SignInButton>
+                </>
+              ) : (
+                <>
+                  <Link to="/dashboard" onClick={() => setMobileMenuOpen(false)}>
+                    <Button variant="cta" className="w-full">
+                      Go to Dashboard
+                    </Button>
+                  </Link>
+                  <div className="flex justify-center pt-2">
+                    <UserButton afterSignOutUrl="/" />
+                  </div>
+                </>
+              )}
             </nav>
           </div>
         )}

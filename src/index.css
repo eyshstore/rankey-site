@@ -92,3 +92,43 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Clerk Custom Styling */
+.cl-rootBox {
+  --cl-color-primary: hsl(149, 100%, 62%);
+  --cl-color-primary-hover: hsl(149, 100%, 55%);
+  --cl-color-text-on-primary: hsl(210, 43%, 19%);
+  --cl-color-background: hsl(210, 20%, 98%);
+  --cl-color-text: hsl(210, 43%, 19%);
+  --cl-border-radius: 0.75rem;
+}
+
+.cl-card,
+.cl-modalContent {
+  border-radius: 1rem !important;
+  box-shadow: 0 10px 30px hsla(210, 43%, 19%, 0.2) !important;
+}
+
+.cl-formButtonPrimary {
+  background: hsl(149, 100%, 62%) !important;
+  color: hsl(210, 43%, 19%) !important;
+  font-weight: 600 !important;
+  border-radius: 0.75rem !important;
+}
+
+.cl-formButtonPrimary:hover {
+  background: hsl(149, 100%, 55%) !important;
+}
+
+.cl-button {
+  border-radius: 0.75rem !important;
+}
+
+.cl-logoImage {
+  height: 3rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.cl-userButtonPopoverCard {
+  border-radius: 0.75rem !important;
+}

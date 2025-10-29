@@ -1,7 +1,22 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useUser } from "@clerk/clerk-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const Dashboard = () => {
+  const { isSignedIn, isLoaded } = useUser();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isLoaded && !isSignedIn) {
+      navigate("/");
+    }
+  }, [isSignedIn, isLoaded, navigate]);
+
+  if (!isLoaded || !isSignedIn) {
+    return null;
+  }
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
