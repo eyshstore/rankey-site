@@ -100,28 +100,48 @@ All colors MUST be HSL.
   --cl-color-text-on-primary: hsl(210, 43%, 19%);
   --cl-color-background: hsl(210, 20%, 98%);
   --cl-color-text: hsl(210, 43%, 19%);
-  --cl-border-radius: 0.75rem;
+  --cl-border-radius: 0.5rem;
 }
 
 .cl-card,
 .cl-modalContent {
   border-radius: 1rem !important;
   box-shadow: 0 10px 30px hsla(210, 43%, 19%, 0.2) !important;
+  background: hsl(0, 0%, 100%) !important;
+  border: 1px solid hsl(210, 20%, 90%) !important;
 }
 
-.cl-formButtonPrimary {
+.cl-modalBackdrop {
+  backdrop-filter: blur(4px) !important;
+}
+
+.cl-formButtonPrimary,
+.cl-footerActionButton {
   background: hsl(149, 100%, 62%) !important;
   color: hsl(210, 43%, 19%) !important;
   font-weight: 600 !important;
-  border-radius: 0.75rem !important;
+  border-radius: 0.5rem !important;
 }
 
-.cl-formButtonPrimary:hover {
+.cl-formButtonPrimary:hover,
+.cl-footerActionButton:hover {
   background: hsl(149, 100%, 55%) !important;
 }
 
+.cl-formButtonSecondary {
+  background: hsl(210, 43%, 19%) !important;
+  color: hsl(149, 100%, 62%) !important;
+  border: 2px solid hsl(149, 100%, 62%) !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+}
+
+.cl-formButtonSecondary:hover {
+  background: hsl(210, 43%, 25%) !important;
+}
+
 .cl-button {
-  border-radius: 0.75rem !important;
+  border-radius: 0.5rem !important;
 }
 
 .cl-logoImage {
@@ -131,4 +151,19 @@ All colors MUST be HSL.
 
 .cl-userButtonPopoverCard {
   border-radius: 0.75rem !important;
+  background: hsl(0, 0%, 100%) !important;
+  border: 1px solid hsl(210, 20%, 90%) !important;
+}
+
+.cl-userButtonPopoverActionButton {
+  color: hsl(210, 43%, 19%) !important;
+  border-radius: 0.5rem !important;
+}
+
+.cl-userButtonPopoverActionButton:hover {
+  background: hsl(149, 100%, 62%, 0.1) !important;
+}
+
+.cl-footer {
+  background: transparent !important;
 }
