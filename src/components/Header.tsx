@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, KeyRound, TrendingUp } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -22,8 +22,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold">
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="relative">
+              <KeyRound className="w-8 h-8 text-accent" />
+              <TrendingUp className="w-4 h-4 text-primary-foreground absolute -top-1 -right-1" />
+            </div>
+            <span className="text-3xl font-bold">
               <span className="text-primary-foreground">Ran</span>
               <span className="text-accent">Key</span>
             </span>
