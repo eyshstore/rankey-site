@@ -24,10 +24,10 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="relative">
-              <KeyRound className="w-8 h-8 text-accent" />
-              <TrendingUp className="w-4 h-4 text-primary-foreground absolute -top-1 -right-1" />
+              <KeyRound className="w-12 h-12 text-accent" />
+              <TrendingUp className="w-6 h-6 text-primary-foreground absolute -top-1 -right-1" />
             </div>
-            <span className="text-3xl font-bold">
+            <span className="text-5xl font-bold">
               <span className="text-primary-foreground">Ran</span>
               <span className="text-accent">Key</span>
             </span>
