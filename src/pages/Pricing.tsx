@@ -76,7 +76,7 @@ const Pricing = () => {
             Simple Plans for Every Research Volume
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto animate-fade-in">
-            14-day free trial · No credit card required
+            14-day free trial
           </p>
         </div>
       </section>

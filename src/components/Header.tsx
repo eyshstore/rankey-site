@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import rankeyLogo from "@/assets/rankey-logo.jpg";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,8 +22,11 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src={rankeyLogo} alt="RanKey Logo" className="h-10 w-auto" />
+          <Link to="/" className="flex items-center space-x-2">
+            <span className="text-2xl font-bold">
+              <span className="text-primary-foreground">Ran</span>
+              <span className="text-accent">Key</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

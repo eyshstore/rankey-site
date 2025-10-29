@@ -14,10 +14,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-primary-foreground/70 text-sm max-w-md">
-              Rank Smart, Sell Big. RanKey helps you scrape and rank Amazon ASINs for eBay dropshipping success.
-            </p>
-            <p className="text-primary-foreground/50 text-xs mt-4">
-              RanKey = Rank + Key: Unlock your eBay profits today.
+              Rank Smart, Sell Big. RanKey helps you scrape and rank the best Amazon ASINs.
             </p>
           </div>
 
@@ -53,9 +50,9 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 text-accent">Support</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#contact" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/contact" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#faq" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
